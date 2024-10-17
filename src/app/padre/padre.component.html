@@ -1,5 +1,18 @@
-<h1>padre works!</h1>
+<div class="datosPadre">
+  <h1>Datos del PADRE</h1>
+  <span>Nombre:</span><b>{{ nombrePadre }}</b><br/>
+  <span>Apellido Paterno:</span><b>{{ apPaternoPadre }}</b><br/>
+  <span>Apellido Materno:</span><b>{{ apMaternoPadre }}</b><br/>
 
+  <app-hijo
+  [apePaternoHijo]="establecerApellido()"
+  />
+
+</div>
+
+
+
+<!--
 <app-contador/>
+-->
 
-<app-hijo [recibeHijo]="mensajePadre" />

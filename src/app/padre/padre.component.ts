@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class PadreComponent {
-  mensajePadre:String = 'Mensaje desde padre';
+  nombrePadre:string = 'Pablo';
+  apPaternoPadre:string = 'Vargas';
+  apMaternoPadre:string = 'Morales';
+
+  establecerApellido(){
+    return this.apPaternoPadre;
+  }
 }

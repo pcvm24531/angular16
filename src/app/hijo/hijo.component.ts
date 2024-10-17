@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class HijoComponent {
-
+  nombreHijo:string='Javier';
   //Este mensaje se recibe desde el padre
-  @Input() recibeHijo:String ='';
+  @Input() apePaternoHijo:string ='';
+  @Input() apeMaternoHijo:string='';
 }

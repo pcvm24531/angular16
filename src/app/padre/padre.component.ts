@@ -11,6 +11,8 @@ export class PadreComponent {
   apPaternoPadre:string = 'Vargas';
   apMaternoPadre:string = 'Morales';
 
+  mensajePadre: string = 'Hola hijo mio como estas?';
+
   establecerApellido(){
     return this.apPaternoPadre;
   }

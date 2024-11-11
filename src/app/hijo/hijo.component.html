@@ -10,4 +10,10 @@
     <input id="messageForDad" [(ngModel)]="message" />
     <button (click)="sendMessage()" >Enviar mensaje</button>
   </div> -->
+
+  <div>
+    <label for="entrada">Envía un mensaje a tu padre:</label>
+    <input type="text" id="entrada" [(ngModel)]="mensaje" >
+    <button type="button" (click)="enviarMensaje()" >Enviar mensaje al padre</button>
+  </div>
 </div>

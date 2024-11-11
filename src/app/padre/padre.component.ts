@@ -11,9 +11,19 @@ export class PadreComponent {
   apPaternoPadre:string = 'Vargas';
   apMaternoPadre:string = 'Morales';
 
-  mensajePadre: string = 'Hola hijo mio como estas?';
+  mensajeDelPadre: string = 'Hola hijo mio como estas?';
 
-  establecerApellido(){
+  mensajeRecibido: string = '';
+
+  establecerApellidoPaterno(){
     return this.apPaternoPadre;
   }
+  establecerApellidoMaterno(){
+    return "Osinaga";
+  }
+
+  resivedMessaFronChield($event: string){
+    this.mensajeRecibido = $event;
+  }
+
 }

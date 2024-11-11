@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Pablo';
+  //Atributos
+  title: string = 'Pablo';
+
+  //constructor
+  constructor(){}
+
+  //metodos
 }

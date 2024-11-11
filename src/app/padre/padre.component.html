@@ -4,10 +4,15 @@
   <span>Apellido Paterno:</span><b>{{ apPaternoPadre }}</b><br/>
   <span>Apellido Materno:</span><b>{{ apMaternoPadre }}</b><br/>
 
-  <app-hijo
-  [apePaternoHijo]="establecerApellido()"
-  [recibeHijo]="mensajePadre"
-  />
+
+  <app-hijo (mensajeDesdeHijo)="resivedMessaFronChield($event)" ></app-hijo>
+  <h4>Mensaje recibido desde el hijo es: {{mensajeRecibido}} </h4>
+
+  <!--<app-hijo
+  [apePaternoHijo]="establecerApellidoPaterno()"
+  [apeMaternoHijo]="establecerApellidoMaterno()"
+  [recibeHijo]="mensajeDelPadre"
+  />-->
 </div>
 
 <!-- <div class="HijoDice">

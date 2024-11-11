@@ -7,17 +7,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 
 export class HijoComponent {
-  nombreHijo:string='Javier';
+  nombreHijo:string = 'Javier';
+
   //Este mensaje se recibe desde el padre
   @Input() apePaternoHijo:string ='';
   @Input() apeMaternoHijo:string='';
   @Input() recibeHijo?: string;//Colocamos '?' para indicar que puede ser vacio
 
   //Bloque que saca mensajes o datos
-  @Output() messageEvent = new EventEmitter<string>();
-  message:string = '';
-
-  sendMessage(){
-    this.messageEvent.emit( this.message );
+  @Output() mensajeDesdeHijo = new EventEmitter<string>();
+  mensaje:string = '';
+  enviarMensaje(){
+    this.mensajeDesdeHijo.emit(this.mensaje);
   }
 }

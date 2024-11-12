@@ -1,5 +1,34 @@
-<h1>padre works!</h1>
+<div class="datosPadre">
+  <h1 appEstiloHermanos >Datos del PADRE</h1>
+  <span>Nombre:</span><b>{{ nombrePadre }}</b><br/>
+  <span>Apellido Paterno:</span><b>{{ apPaternoPadre }}</b><br/>
+  <span>Apellido Materno:</span><b>{{ apMaternoPadre }}</b><br/>
 
+
+  <app-hijo
+    (mensajeDesdeHijo)="resivedMessaFronChield($event)"
+    [apePaternoHijo]="establecerApellidoPaterno()"
+    [apeMaternoHijo]="establecerApellidoMaterno()"
+    [mensajePadre]="enviarMensajeAHijo()"
+     ></app-hijo>
+  <h4>Hijo dice: {{mensajeRecibido}} </h4>
+  <div>
+    <label for="mensajeParaHijo">Envía un mensaje a tu hijo</label>
+    <br/>
+    <input id="mensajeParaHijo" type="text" [(ngModel)]="mensajeDelPadre" />
+    <br/>
+    <button type="button"  >Enviar mensaje al hijo</button>
+  </div>
+
+</div>
+
+<!-- <div class="HijoDice">
+  <p [RecibeHijo]="msgForDad" ></p>
+</div> -->
+
+
+
+<!--
 <app-contador/>
+-->
 
-<app-hijo [recibeHijo]="mensajePadre" />

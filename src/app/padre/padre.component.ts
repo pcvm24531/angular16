@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-padre',
@@ -7,5 +7,28 @@ import { Component } from '@angular/core';
 })
 
 export class PadreComponent {
-  mensajePadre:String = 'Mensaje desde padre';
+  nombrePadre:string = 'Pablo';
+  apPaternoPadre:string = 'Vargas';
+  apMaternoPadre:string = 'Morales';
+
+  mensajeDelPadre: string = 'Hijo mio como estas?';
+
+  mensajeRecibido: string = '';
+
+   establecerApellidoPaterno(){
+    return this.apPaternoPadre;
+  }
+  establecerApellidoMaterno(){
+    return "Osinaga";
+  }
+
+  resivedMessaFronChield($event: string){
+    this.mensajeRecibido = $event;
+  }
+
+  //Enviamos mensaje dinamico al hijo
+ enviarMensajeAHijo(){
+  return this.mensajeDelPadre;
+ }
+
 }

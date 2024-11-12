@@ -1,3 +1,10 @@
-h1{
-  color: aqua;
+
+.datosPadre{
+  background-color: rgba(255, 249, 127, 0.364);
+  padding: 10px;
+  border: solid 1px #000000;
+}
+.HijoDice{
+  background-color: rgba(255, 249, 127, 0.364);
+  color: #000000;
 }

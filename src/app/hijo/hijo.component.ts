@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -7,7 +7,18 @@ import { Component, Input } from '@angular/core';
 })
 
 export class HijoComponent {
+  nombreHijo:string = 'Javier';
 
   //Este mensaje se recibe desde el padre
-  @Input() recibeHijo:String ='';
+  @Input() apePaternoHijo:string ='';
+  @Input() apeMaternoHijo:string='';
+  @Input() recibeHijo?: string;//Colocamos '?' para indicar que puede ser vacio
+  @Input() mensajePadre: string = '';
+
+  //Bloque que saca mensajes o datos
+  @Output() mensajeDesdeHijo = new EventEmitter<string>();
+  mensaje:string = '';
+  enviarMensaje(){
+    this.mensajeDesdeHijo.emit(this.mensaje);
+  }
 }

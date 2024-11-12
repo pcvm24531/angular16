@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from "./hijo/hijo.component";
 import { ContadorComponent } from './contador/contador.component';
+import { FormsModule } from '@angular/forms';
+import { EstiloHermanosDirective } from './estilo-hermanos.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
     HijoComponent,
-    ContadorComponent
+    ContadorComponent,
+    EstiloHermanosDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

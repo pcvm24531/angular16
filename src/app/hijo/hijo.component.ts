@@ -13,6 +13,7 @@ export class HijoComponent {
   @Input() apePaternoHijo:string ='';
   @Input() apeMaternoHijo:string='';
   @Input() recibeHijo?: string;//Colocamos '?' para indicar que puede ser vacio
+  @Input() mensajePadre: string = '';
 
   //Bloque que saca mensajes o datos
   @Output() mensajeDesdeHijo = new EventEmitter<string>();

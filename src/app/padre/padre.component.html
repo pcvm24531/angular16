@@ -5,14 +5,21 @@
   <span>Apellido Materno:</span><b>{{ apMaternoPadre }}</b><br/>
 
 
-  <app-hijo (mensajeDesdeHijo)="resivedMessaFronChield($event)" ></app-hijo>
-  <h4>Mensaje recibido desde el hijo es: {{mensajeRecibido}} </h4>
+  <app-hijo
+    (mensajeDesdeHijo)="resivedMessaFronChield($event)"
+    [apePaternoHijo]="establecerApellidoPaterno()"
+    [apeMaternoHijo]="establecerApellidoMaterno()"
+    [mensajePadre]="enviarMensajeAHijo()"
+     ></app-hijo>
+  <h4>Hijo dice: {{mensajeRecibido}} </h4>
+  <div>
+    <label for="mensajeParaHijo">Envía un mensaje a tu hijo</label>
+    <br/>
+    <input id="mensajeParaHijo" type="text" [(ngModel)]="mensajeDelPadre" />
+    <br/>
+    <button type="button"  >Enviar mensaje al hijo</button>
+  </div>
 
-  <!--<app-hijo
-  [apePaternoHijo]="establecerApellidoPaterno()"
-  [apeMaternoHijo]="establecerApellidoMaterno()"
-  [recibeHijo]="mensajeDelPadre"
-  />-->
 </div>
 
 <!-- <div class="HijoDice">
